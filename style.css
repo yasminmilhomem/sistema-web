@@ -271,102 +271,154 @@ footer li:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .menu-lateral {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Esconde o menu fora da tela */
+        width: 250px;
+        height: 100%;
+        background-color: var(--roxo-medio); /* Cor de fundo do menu */
+        transition: left 0.3s ease;
+        z-index: 999; /* Garante que o menu esteja acima de outros elementos */
+    }
 
-.menu-lateral {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -250px; /* Esconde o menu fora da tela */
-    width: 250px;
-    height: 100%;
-    background-color: var(--roxo-medio); /* Cor de fundo do menu */
-    transition: left 0.3s ease;
-    z-index: 999; /* Garante que o menu esteja acima de outros elementos */
-}
+    .menu-lateral.aberto {
+        left: 0;
+    }
 
-/* Estilo para mostrar o menu quando aberto */
-.menu-lateral.aberto {
-    left: 0;
-}
+    .menu-lateral ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 20px;
+    }
 
-/* Estilo dos itens do menu */
-.menu-lateral ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 20px;
-}
+    .menu-lateral ul li {
+        margin-bottom: 10px;
+    }
 
-.menu-lateral ul li {
-    margin-bottom: 10px;
-}
+    .menu-lateral ul li a {
+        color: var(--branco);
+        text-decoration: none;
+        font-size: 18px;
+    }
 
-.menu-lateral ul li a {
-    color: var(--branco);
-    text-decoration: none;
-    font-size: 18px;
-}
+    .botao-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: transparent;
+        border: none;
+        color: var(--roxo-mais-escuro);
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1000; /* Garante que o botão esteja acima do menu */
+    }
 
-/* Estilo do botão de alternância do menu */
-.botao-menu {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: transparent;
-    border: none;
-    color: var(--roxo-mais-escuro);
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1000; /* Garante que o botão esteja acima do menu */
-}
+    .menu-lateral {
+        flex-direction: column;
+    }
 
-.menu-lateral {
-    flex-direction: column;
-}
+    .menu-lateral ul {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        text-align: left;
+    }
 
-.menu-lateral ul {
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    text-align: left;
-}
+    .topo img {
+        display: none;
+    }
 
-.topo img {
-    display: none;
-}
+    #inicio {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+    }
 
-#inicio {
-    flex-direction: column-reverse;
-    text-align: center;
-    height: auto;
-}
+    #inicio .esquerda {
+        align-items: center;
+    }
 
-#inicio .esquerda {
-    align-items: center;
-}
+    #inicio .esquerda, .direita {
+        width: 100%;
+    }
 
-#inicio .esquerda, .direita {
-    width: 100%;
-}
+    #inicio .direita img {
+        width: 50%;
+    }
 
-#inicio .direita img {
-    width: 50%;
-}
+    h2 {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+    }
 
-.produtos {
-    flex-direction: column;
-}
+    h3 {
+        font-weight: normal;
+        font-size: 18px;
+    }
 
-.beneficios {
-    flex-direction: column;
-}
+    #produtos {
+        padding: 0;
+    }
 
-#sobre-nos {
-    flex-direction: column;
-}
+    .produtos {
+        justify-content: space-around;
+        padding-top: 26px;
+        flex-direction: column;
+    }
 
-footer {
-    flex-direction: column;
-}
+    .produto {
+        gap: 16px;
+        padding-top: 20px;
+    }
+
+    #beneficios {
+        padding: 30px 0;
+        gap: 50px;
+    }
+
+    .beneficios {
+        padding: 0 100px;
+        display: flex;
+        gap: 60px;
+
+    }
+
+    .beneficios {
+        flex-direction: column;
+    }
+
+    #sobre-nos {
+        flex-direction: column;
+        padding: 20px 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sobre-nos .esquerda h2, p{
+        width: auto;
+    }
+
+    #sobre-nos .esquerda img {
+        width: 400px;
+    }
+
+    #sobre-nos .direita {
+        width: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer ul {
+        text-align: start;
+    }
 }
