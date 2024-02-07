@@ -10,16 +10,19 @@
 <body>
     <section class="topo">
         <a href="index.html"><img src="images/favicon.svg" alt=""></a>
-        <ul>
-            <a href="index.html"><li>Página inicial</li></a>
-            <a href="#produtos"><li>Produtos</li></a>
-            <a href="#beneficios"><li>Benefícios</li></a>
-            <a href="#sobre-nos"><li>Sobre nós</li></a>
-            <a class="botao-primario" href="">Comprar agora!</a>
-        </ul>
+        <nav class="menu-lateral">
+            <ul>
+                <a href="index.html"><li>Página inicial</li></a>
+                <a href="#produtos"><li>Produtos</li></a>
+                <a href="#beneficios"><li>Benefícios</li></a>
+                <a href="#sobre-nos"><li>Sobre nós</li></a>
+                <a class="botao-primario" href="">Comprar agora!</a>
+            </ul>
+        </nav>
+        <ion-icon class="botao-menu" name="menu-outline" onclick="toggleMenu()"></ion-icon>
     </section>
 
-    <section class="header">
+    <section id="inicio">
         <section class="esquerda">
         <h1>Mais do que um fone: um sonho!</h1>
         <p>Explore um mundo de emoções sonoras!
@@ -130,5 +133,6 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>    
 </body>
 </html>
