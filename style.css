@@ -266,6 +266,9 @@ footer li:hover {
     font-size: 22px;
 }
 
+.botao-menu {
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -306,6 +309,7 @@ footer li:hover {
 
 /* Estilo do botão de alternância do menu */
 .botao-menu {
+    display: block;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -335,6 +339,15 @@ footer li:hover {
 #inicio {
     flex-direction: column-reverse;
     text-align: center;
+    height: auto;
+}
+
+#inicio .esquerda {
+    align-items: center;
+}
+
+#inicio .esquerda, .direita {
+    width: 100%;
 }
 
 #inicio .direita img {
