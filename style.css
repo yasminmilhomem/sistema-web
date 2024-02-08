@@ -270,6 +270,11 @@ footer li:hover {
     display: none;
 }
 
+
+.botao-menu-close {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     .menu-lateral {
         display: block;
@@ -280,11 +285,20 @@ footer li:hover {
         height: 100%;
         background-color: var(--roxo-medio); /* Cor de fundo do menu */
         transition: left 0.3s ease;
-        z-index: 999; /* Garante que o menu esteja acima de outros elementos */
+        z-index: 1000; /* Garante que o menu esteja acima de outros elementos */
+        flex-direction: column;
+    }
+
+    .botao-menu-close {
+        display: none;
     }
 
     .menu-lateral.aberto {
         left: 0;
+    }
+
+    .menu-lateral.aberto .botao-menu-close {
+        display: block;
     }
 
     .menu-lateral ul {
@@ -304,6 +318,10 @@ footer li:hover {
         font-size: 18px;
     }
 
+    .botao-primario {
+        display: none;
+    }
+
     .botao-menu {
         display: block;
         position: fixed;
@@ -314,14 +332,11 @@ footer li:hover {
         color: var(--roxo-mais-escuro);
         font-size: 20px;
         cursor: pointer;
-        z-index: 1000; /* Garante que o botão esteja acima do menu */
-    }
-
-    .menu-lateral {
-        flex-direction: column;
+        z-index: 999; /* Garante que o botão esteja acima do menu */
     }
 
     .menu-lateral ul {
+        display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
